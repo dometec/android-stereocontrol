@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">StereoControl</string>
+    
+    <string name="Fm_button">Fm</string>
+    <string name="Pc_button">Pc</string>
+    <string name="Off_button">Off</string>
+    
+    <string name="Vu_button">Vol+</string>
+    <string name="Vd_button">Vol-</string>
+    <string name="Cu_button">Ch+</string>
+    <string name="Cd_button">Ch-</string>
+
+    <string name="Ba_button">Bass</string>
+    <string name="Mu_button">Mute</string>
+    
+    <string name="background_content">STEREO\nCONTROL</string>
+    <string name="head_content">Stereo Control</string>
+
+</resources>
