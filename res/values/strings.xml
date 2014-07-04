@@ -17,5 +17,16 @@
     
     <string name="background_content">STEREO\nCONTROL</string>
     <string name="head_content">Stereo Control</string>
+    <string name="cri">Cristina</string>
+    <string name="dom">Domenico</string>
+    <string name="anto">Antonio</string>
+    <string name="f3">F3</string>
+    <string name="rtlis">RTL IT-Style</string>
+    <string name="playnext">Play Next</string>
+    <string name="stop">Stop</string>
+    <string name="call">S.Casa</string>
+    <string name="cbath">S.Bagno</string>
+    <string name="cnigth">S.Letto</string>
+    <string name="ckicne">S.Cucina</string>
 
 </resources>

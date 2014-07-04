@@ -15,16 +15,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 public class MainActivity extends Activity implements OnClickListener {
-
-	private TextView tvMessage;
 
 	private final static String SENDER_ID = "614770691258";
 
@@ -42,8 +40,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_fullscreen);
-		tvMessage = (TextView) findViewById(R.id.textMessage);
 
 		context = getApplicationContext();
 
@@ -67,42 +65,10 @@ public class MainActivity extends Activity implements OnClickListener {
 	@SuppressWarnings("unchecked")
 	@Override
 	public void onClick(View v) {
-
 		Button btn = (Button) v;
-
-		String command = "";
-
-		if (R.id.buttonFm == btn.getId())
-			command = "Sony,2113,9";
-
-		if (R.id.buttonOff == btn.getId())
-			command = "Sony,3905,9";
-
-		if (R.id.buttonPc == btn.getId())
-			command = "Sony,1377,9";
-
-		if (R.id.buttonVu == btn.getId())
-			command = "Sony,1153,10";
-
-		if (R.id.buttonVd == btn.getId())
-			command = "Sony,3201,10";
-
-		if (R.id.buttonCu == btn.getId())
-			command = "Sony,150,3";
-
-		if (R.id.buttonCd == btn.getId())
-			command = "Sony,2198,3";
-
-		if (R.id.buttonBass == btn.getId())
-			command = "Sony,22793,3";
-
-		if (R.id.buttonMute == btn.getId())
-			command = "Sony,641,1";
-
-		command += '\n';
-
-		new SendPacket(command, "192.168.0.14", 20118).execute();
-
+		String[] commands = btn.getTag().toString().split(";");
+		for (String cmd : commands)
+			new SendPacket(cmd + '\n', "192.168.0.14", 20118).execute();
 	}
 
 	@SuppressWarnings("rawtypes")
@@ -131,11 +97,12 @@ public class MainActivity extends Activity implements OnClickListener {
 				DatagramSocket datagramSocket = new DatagramSocket();
 				datagramSocket.setBroadcast(false);
 				datagramSocket.send(packet);
+				datagramSocket.close();
 
 				Log.i(this.getClass().getName(), "Sended package: " + new String(packet.getData()));
 
 			} catch (Exception e) {
-				tvMessage.setText(e.getMessage());
+				e.printStackTrace();
 			}
 
 			return null;
