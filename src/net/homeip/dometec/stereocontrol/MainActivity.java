@@ -67,8 +67,14 @@ public class MainActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		Button btn = (Button) v;
 		String[] commands = btn.getTag().toString().split(";");
-		for (String cmd : commands)
+		for (String cmd : commands) {
 			new SendPacket(cmd + '\n', "192.168.0.14", 20118).execute();
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 	@SuppressWarnings("rawtypes")

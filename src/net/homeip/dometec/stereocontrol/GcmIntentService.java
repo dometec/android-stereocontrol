@@ -28,6 +28,7 @@ public class GcmIntentService extends IntentService {
 
 		Bundle extras = intent.getExtras();
 		Log.d(TAG, "Notification Data Json :" + extras.getString("message"));
+		Log.d(TAG, "Notification CronoId Json :" + extras.getString("cronoId"));
 
 		GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this);
 		String messageType = gcm.getMessageType(intent);

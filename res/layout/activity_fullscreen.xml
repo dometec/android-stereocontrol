@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="Sony,3905,9;pstop"
+            android:tag="s.s.5.12.3905;pstop"
             android:text="@string/Off_button" />
 
         <Button
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="Sony,2113,9"
+            android:tag="s.s.5.12.2113"
             android:text="@string/Fm_button" />
 
         <Button
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="Sony,1377,9"
+            android:tag="s.s.5.12.1377"
             android:text="@string/Pc_button" />
     </LinearLayout>
 
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="Sony,1153,10"
+            android:tag="s.s.5.12.1153"
             android:text="@string/Vu_button" />
 
         <Button
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="Sony,3201,10"
+            android:tag="s.s.5.12.3201"
             android:text="@string/Vd_button" />
 
         <Button
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="Sony,150,3"
+            android:tag="s.s.3.12.150"
             android:text="@string/Cu_button" />
 
         <Button
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="Sony,2198,3"
+            android:tag="s.s.3.12.2198"
             android:text="@string/Cd_button" />
     </LinearLayout>
 
@@ -96,20 +96,11 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/buttonBass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="Sony,22793,3"
-            android:text="@string/Ba_button" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onClick"
-            android:tag="Sony,641,1"
+            android:tag="s.s.3.12.641"
             android:text="@string/Mu_button" />
     </LinearLayout>
 
@@ -123,7 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="pu/root/Music/Cristina"
+            android:tag="puCristina"
             android:text="@string/cri" />
 
         <Button
@@ -132,7 +123,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="pu/root/Music/Domenico"
+            android:tag="puDomenico"
             android:text="@string/dom" />
 
         <Button
@@ -141,7 +132,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="pu/root/Music/Antonio"
+            android:tag="puAntonio"
             android:text="@string/anto" />
     </LinearLayout>
 
@@ -201,7 +192,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="cassall"
+            android:tag="s.s.3.12.2032"
             android:text="@string/call" />
 
         <Button
@@ -210,7 +201,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="cassbagno"
+            android:tag="s.s.3.12.2039;s.s.3.12.2036;s.s.3.12.2041"
             android:text="@string/cbath" />
 
         <Button
@@ -219,7 +210,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="cassletto"
+            android:tag="s.s.3.12.2038;s.s.3.12.2036;s.s.3.12.2042"
             android:text="@string/cnigth" />
 
         <Button
@@ -228,7 +219,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:tag="casscucina"
+            android:tag="s.s.3.12.2035;s.s.3.12.2039;s.s.3.12.2042"
             android:text="@string/ckicne" />
     </LinearLayout>
 
